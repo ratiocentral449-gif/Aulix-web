@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- HTML Foundation 2.1: elementos del head -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Aulix: encuentra y comparte fotos, videos, talleres, clases virtuales y exámenes de todas las carreras.">
+  <meta name="keywords" content="universidad, talleres, clases virtuales, exámenes, fotos, videos">
+  <meta name="author" content="Proyecto personal">
+  <!-- HTML Foundation 9.1: viewport para que la página se adapte al celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulix | Encuentra y comparte contenido académico</title>
+  <!-- CSS Foundation 5.1: fuentes de Google Fonts (Inter para todo y Playfair Display para la sección Propósito) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap">
+  <!-- Dos hojas de estilo: estilos.css (página, menú, secciones) y formulario.css (solo el formulario) -->
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="formulario.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+
+  <!-- HTML Foundation 7: etiquetas semánticas -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio">
+        <span class="logo">A</span>
+        Aulix
+      </a>
+
+      <button id="boton-menu" class="hamburguesa" type="button" aria-label="Abrir o cerrar menú">☰ Menú</button>
+
+      <nav id="navegacion" class="navegacion">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proposito">Propósito</a></li>
+          <li>
+            <!-- HTML Foundation 7.1: details y summary crean el submenú vertical -->
+            <details class="desplegable">
+              <summary>Explorar</summary>
+              <ul class="submenu">
+                <li><a href="#fotos">Fotos y videos</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#clases">Clases virtuales</a></li>
+                <li><a href="#examenes">Exámenes</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#publicaciones">Publicaciones</a></li>
+          <li><a href="#video">Video</a></li>
+          <!-- Página enlazada que se abre en la MISMA pestaña (target="_self") -->
+          <li><a href="guia.html" target="_self">Guía</a></li>
+          <li><a class="boton-menu" href="#contacto">Crear cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="contenedor">
+        <div class="hero-texto">
+          <h1>Todo lo que se publica en tu universidad, en un solo lugar</h1>
+          <!-- HTML Foundation 4.1: strong, mark y em son modificadores de texto -->
+          <p>Encuentra <strong>fotos y videos</strong> de clases, talleres, clases virtuales y exámenes de <mark>cualquier carrera</mark>. <em>Compártelo y organízalo</em> con tus compañeros.</p>
+          <form class="buscador" action="#publicaciones">
+            <input type="search" name="buscar" placeholder="Buscar fotos, videos, talleres, exámenes...">
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+        <aside class="aviso">
+          <p><small>Esta semana</small></p>
+          <h2>12 talleres nuevos</h2>
+          <p>3 clases virtuales en vivo hoy</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROPÓSITO: usa una fuente de Google Fonts diferente (Playfair Display) en el título -->
+    <section id="proposito" class="seccion proposito">
+      <div class="contenedor">
+        <h2>¿Qué problema resuelve Aulix?</h2>
+        <div class="tarjetas">
+          <article class="tarjeta"><h3>El problema</h3><p>Las fotos, videos, talleres, clases virtuales y exámenes de cada carrera están repartidos en chats, carpetas y redes. Encontrarlos toma tiempo y muchas veces se pierden.</p></article>
+          <article class="tarjeta"><h3>La solución</h3><p>Aulix reúne todo ese contenido en una sola plataforma, organizado por carrera y por tipo, para buscarlo, compartirlo y repasarlo fácilmente.</p></article>
+          <article class="tarjeta"><h3>A quién ayuda</h3><p>A estudiantes que buscan material de estudio y a quienes quieren compartir lo que aprenden con su carrera.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="explorar" class="seccion gris">
+      <div class="contenedor">
+        <h2>Explora por tipo de contenido</h2>
+        <div class="tarjetas">
+          <article id="fotos" class="tarjeta"><h3>Fotos y videos</h3><p>De clases, ferias y eventos de cualquier carrera.</p></article>
+          <article id="talleres" class="tarjeta"><h3>Talleres</h3><p>Material y registro de talleres nuevos cada semana.</p></article>
+          <article id="clases" class="tarjeta"><h3>Clases virtuales</h3><p>Grabaciones y clases en vivo, listas para repasar.</p></article>
+          <article id="examenes" class="tarjeta"><h3>Exámenes</h3><p>Prácticas y exámenes anteriores para prepararte.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE IMAGEN: figure y figcaption -->
+    <section id="imagen" class="seccion">
+      <div class="contenedor">
+        <h2>Así se ve Aulix</h2>
+        <figure class="figura">
+          <img src="imagen-aulix.jpg" alt="Collage de publicaciones de Aulix: talleres, clases virtuales, exámenes y ferias de varias carreras" width="1200" height="600">
+          <figcaption>Publicaciones de distintas carreras reunidas en un solo lugar: sistemas, administración, ingeniería industrial, psicología y enfermería.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE VIDEO: etiqueta video con controles -->
+    <section id="video" class="seccion gris">
+      <div class="contenedor">
+        <h2>Mira cómo funciona</h2>
+        <video class="video" controls preload="metadata" poster="video-poster.jpg">
+          <source src="video-aulix.mp4" type="video/mp4">
+          Tu navegador no admite la etiqueta de video.
+        </video>
+      </div>
+    </section>
+
+    <section id="publicaciones" class="seccion">
+      <div class="contenedor">
+        <h2>Publicaciones recientes</h2>
+        <div class="tarjetas">
+          <article class="tarjeta"><div class="foto foto1"></div><h3>Taller de Diseño UX</h3><p>Ingeniería de Sistemas</p><p><small>3 videos · 24 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto2"></div><h3>Clase virtual: Excel</h3><p>Administración</p><p><small>Grabación · 1 h 20 min</small></p></article>
+          <article class="tarjeta"><div class="foto foto3"></div><h3>Examen parcial de Estadística</h3><p>Ingeniería Industrial</p><p><small>PDF · 12 preguntas</small></p></article>
+          <article class="tarjeta"><div class="foto foto4"></div><h3>Feria de Psicología</h3><p>Psicología</p><p><small>48 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto5"></div><h3>Taller de Primeros Auxilios</h3><p>Enfermería</p><p><small>2 videos · 15 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto6"></div><h3>Clase virtual: Marketing Digital</h3><p>Administración</p><p><small>Grabación · 2 h</small></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion gris">
+      <div class="contenedor">
+        <h2>Empieza a compartir</h2>
+        <!-- HTML Foundation 8: formulario con select, radio y checkbox -->
+        <form class="formulario" action="#inicio">
+          <fieldset>
+            <legend>Crear cuenta</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="correo">Correo universitario:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <!-- Lista desplegable: select + option -->
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera">
+              <option value="sistemas">Ingeniería de Sistemas</option>
+              <option value="administracion">Administración</option>
+              <option value="psicologia">Psicología</option>
+              <option value="enfermeria">Enfermería</option>
+            </select>
+
+            <!-- Radio: solo se puede elegir una opción (mismo name) -->
+            <fieldset class="grupo">
+              <legend>Soy:</legend>
+              <input type="radio" id="estudiante" name="rol" value="estudiante" checked>
+              <label for="estudiante">Estudiante</label>
+              <input type="radio" id="docente" name="rol" value="docente">
+              <label for="docente">Docente</label>
+            </fieldset>
+
+            <!-- Checkbox: se pueden marcar varias opciones -->
+            <fieldset class="grupo">
+              <legend>Quiero ver:</legend>
+              <input type="checkbox" id="ver-talleres" name="interes" value="talleres">
+              <label for="ver-talleres">Talleres</label>
+              <input type="checkbox" id="ver-clases" name="interes" value="clases">
+              <label for="ver-clases">Clases virtuales</label>
+              <input type="checkbox" id="ver-examenes" name="interes" value="examenes">
+              <label for="ver-examenes">Exámenes</label>
+            </fieldset>
+
+            <label for="mensaje">¿Qué quieres publicar?</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+            <div class="aceptar">
+              <input type="checkbox" id="acepto" name="acepto" required>
+              <label for="acepto">Acepto la <a href="privacidad.html" target="_blank">política de privacidad</a></label>
+            </div>
+
+            <button type="submit">Crear cuenta</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página con la Ley de Protección de Datos Personales (PDF) -->
+  <footer class="pie">
+    <p><small>© 2026 Aulix. Proyecto personal de diseño web y móvil.</small></p>
+    <p>
+      <!-- target="_blank": la página enlazada se abre en una pestaña NUEVA -->
+      <a href="privacidad.html" target="_blank">Política de privacidad</a> ·
+      <a href="https://diariooficial.elperuano.pe/Normas/obtenerDocumento?idNorma=23" target="_blank" rel="noopener">Ley N.° 29733 de Protección de Datos Personales (PDF)</a>
+    </p>
+  </footer>
+
+</body>
+</html>

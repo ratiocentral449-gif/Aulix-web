@@ -1,0 +1,63 @@
+/* ===== FORMULARIO.CSS: solo la sección del formulario de "Crear cuenta" ===== */
+
+.formulario {
+  max-width: 560px;
+}
+.formulario fieldset {
+  padding: 20px;
+  border: 1px solid #b8c3c7;          /* CSS Foundation 3.3 */
+  border-radius: 14px;                /* CSS Foundation 3.4 */
+  background: white;
+}
+.formulario label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;                        /* CSS Foundation 4.1 */
+  margin: 4px 0 8px;
+  padding: 10px;
+  border: 1px solid #b8c3c7;
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* Grupos de radio y checkbox: dentro de su propio fieldset */
+.formulario .grupo {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+.formulario .grupo legend {
+  font-weight: bold;
+}
+/* Los radio y checkbox no deben ocupar todo el ancho; su texto va al lado */
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+  width: auto;
+  margin: 0 6px 0 0;
+}
+.formulario .grupo label,
+.formulario .aceptar label {
+  display: inline;
+  margin: 0 16px 0 0;
+  font-weight: normal;
+}
+.formulario .aceptar {
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+
+/* CSS Foundation 7.1: media query solo para el formulario */
+@media screen and (max-width: 600px) {
+  .formulario fieldset {
+    padding: 14px;
+  }
+  .formulario .grupo label {
+    display: block;
+    margin: 6px 0;
+  }
+}
